@@ -246,7 +246,7 @@ body {
     padding: 4px 12px;
     border-radius: 12px;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .badge-yellow { background: #fff3cd; color: #856404; }
@@ -254,20 +254,117 @@ body {
 .badge-blue { background: #d1ecf1; color: #0c5460; }
 .badge-green { background: #d4edda; color: #155724; }
 
-/* Wadah Gambar Rambu Asli agar Rapi & Seragam */
-.sign-image-container {
-    width: 90px;
-    height: 90px;
+/* ==================================================
+   BENTUK VISUAL RAMBU CSS MURNI (SESUAI HTML)
+   ================================================== */
+.sign-shape {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 15px auto;
+    font-weight: bold;
+    margin: 5px auto 22px auto;
+    position: relative;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
 }
 
-.sign-image-container img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+/* 1. Rambu Peringatan: Belah Ketupat Kuning */
+.shape-diamond {
+    width: 68px;
+    height: 68px;
+    background-color: #ffd32a;
+    border: 4px solid #1e272e;
+    border-radius: 8px;
+    transform: rotate(45deg);
+    margin: 15px auto 28px auto;
+}
+
+.shape-diamond span {
+    transform: rotate(-45deg);
+    color: #1e272e;
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-align: center;
+    line-height: 1.1;
+}
+
+/* 2. Rambu Larangan: Lingkaran Merah Penuh (Dilarang Masuk) */
+.shape-circle-solid-red {
+    width: 82px;
+    height: 82px;
+    background-color: #ff3f34;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    outline: 2px solid #ff3f34;
+}
+
+.white-bar {
+    width: 52px;
+    height: 14px;
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+
+/* Rambu Larangan: Lingkaran Putih Garis Tepi Merah */
+.shape-circle-red {
+    width: 82px;
+    height: 82px;
+    background-color: #ffffff;
+    border: 8px solid #ff3f34;
+    border-radius: 50%;
+    color: #1e272e;
+    font-size: 1.45rem;
+    font-weight: 800;
+    overflow: hidden;
+}
+
+/* Garis Coret Diagonal Merah untuk Rambu Larangan */
+.shape-circle-red.slash::after {
+    content: "";
+    position: absolute;
+    width: 115%;
+    height: 7px;
+    background-color: #ff3f34;
+    transform: rotate(-45deg);
+}
+
+/* 3. Rambu Perintah: Lingkaran Biru */
+.shape-circle-blue {
+    width: 82px;
+    height: 82px;
+    background-color: #0984e3;
+    border: 3px solid #ffffff;
+    outline: 2px solid #0984e3;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+/* 4. Rambu Petunjuk: Persegi Panjang Hijau & Biru */
+.shape-rect-green {
+    width: 115px;
+    height: 62px;
+    background-color: #05c46b;
+    border: 3px solid #ffffff;
+    outline: 2px solid #05c46b;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 800;
+    padding: 0 8px;
+}
+
+.shape-rect-blue {
+    width: 115px;
+    height: 62px;
+    background-color: #0984e3;
+    border: 3px solid #ffffff;
+    outline: 2px solid #0984e3;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 800;
+    padding: 0 8px;
 }
 
 .sign-card h3 {

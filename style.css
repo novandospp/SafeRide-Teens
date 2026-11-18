@@ -1,4 +1,17 @@
-/* Reset Dasar & Font */
+/* ==================================================
+   PENGATURAN TEMA & VARIABEL WARNA MODERN
+   ================================================== */
+:root {
+    --bg-main: #f0f4f8;
+    --card-bg: #ffffff;
+    --text-main: #2d3748;
+    --primary-color: #2563eb; /* Biru Modern */
+    --accent-color: #f59e0b;  /* Kuning Cerah Remaja */
+    --success-color: #10b981; /* Hijau Segar */
+    --danger-color: #ef4444;  /* Merah Peringatan */
+    --radius-box: 16px;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,55 +23,62 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f6f9;
-    color: #2c3e50;
-    line-height: 1.6;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.7;
 }
 
-/* Navigasi Utama */
+/* ==================================================
+   NAVIGASI UTAMA (STYLING GLASSMORPHISM TIPIS)
+   ================================================== */
 .navbar {
-    background-color: #1e272e;
+    background-color: #1e293b;
     color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
+    padding: 18px 6%;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .logo {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #ffdd59;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fbbf24;
+    letter-spacing: 0.5px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 24px;
 }
 
 .nav-links a {
-    color: #d2dae2;
+    color: #cbd5e1;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-    color: #ffdd59;
+    color: #fbbf24;
 }
 
-/* Bagian Beranda (Hero Section) */
+/* ==================================================
+   HERO SECTION (BANNER UTAMA YANG MENARIK)
+   ================================================== */
 .hero-section {
-    background: linear-gradient(135deg, #1e272e, #2f3640);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
     color: #ffffff;
     text-align: center;
-    padding: 60px 20px;
+    padding: 70px 20px;
+    border-bottom: 4px solid var(--accent-color);
 }
 
 .hero-content {
@@ -67,134 +87,148 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-    color: #ffdd59;
+    font-size: 2.3rem;
+    margin-bottom: 12px;
+    color: #f8fafc;
+    font-weight: 800;
 }
 
 .subtitle {
-    font-size: 1.1rem;
-    color: #d2dae2;
-    margin-bottom: 30px;
+    font-size: 1.15rem;
+    color: #94a3b8;
+    margin-bottom: 35px;
 }
 
 .clock-box {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.07);
+    padding: 22px 30px;
+    border-radius: var(--radius-box);
     display: inline-block;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
 }
 
 .clock-label {
-    font-size: 0.9rem;
-    color: #d2dae2;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 #real-time-clock {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #0be881;
-    margin: 5px 0;
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #34d399;
+    margin: 6px 0;
     letter-spacing: 2px;
 }
 
 .reminder-text {
     font-size: 0.95rem;
     font-style: italic;
-    color: #ffdd59;
+    color: #fbbf24;
 }
 
-/* Container Utama & Section */
+/* ==================================================
+   CONTAINER UTAMA & SECTION KARTU
+   ================================================== */
 .container {
     max-width: 1100px;
-    margin: 30px auto;
+    margin: 40px auto;
     padding: 0 20px;
 }
 
 .section-box {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    background: var(--card-bg);
+    padding: 35px;
+    border-radius: var(--radius-box);
+    margin-bottom: 35px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e2e8f0;
 }
 
 .section-box h2 {
-    color: #1e272e;
-    margin-bottom: 10px;
-    border-bottom: 3px solid #ffdd59;
-    display: inline-block;
-    padding-bottom: 5px;
+    color: #0f172a;
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .section-desc {
-    color: #576574;
-    margin-bottom: 20px;
+    color: #64748b;
+    margin-bottom: 25px;
+    font-size: 1rem;
 }
 
-/* Checklist Sebelum Jalan */
+/* ==================================================
+   CHECKLIST SEBELUM JALAN
+   ================================================== */
 .checklist-items {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
     margin-bottom: 20px;
 }
 
 .check-item {
     display: flex;
     align-items: center;
-    gap: 12px;
-    background: #f8f9fa;
-    padding: 12px 15px;
-    border-radius: 8px;
+    gap: 15px;
+    background: #f8fafc;
+    padding: 15px 18px;
+    border-radius: 12px;
     cursor: pointer;
-    border: 1px solid #e1e8ed;
-    transition: background 0.2s;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
 }
 
 .check-item:hover {
-    background: #eef2f5;
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+    transform: translateX(4px);
 }
 
 .check-item input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    accent-color: #05c46b;
+    width: 20px;
+    height: 20px;
+    accent-color: var(--success-color);
     cursor: pointer;
 }
 
 .status-message {
-    font-weight: bold;
-    padding: 12px;
-    border-radius: 8px;
-    background-color: #fff3cd;
-    color: #856404;
+    font-weight: 600;
+    padding: 14px;
+    border-radius: 12px;
+    background-color: #fef3c7;
+    color: #92400e;
     text-align: center;
 }
 
 .status-message.ready {
-    background-color: #d4edda;
-    color: #155724;
+    background-color: #d1fae5;
+    color: #065f46;
 }
 
-/* Tombol Filter Galeri */
+/* ==================================================
+   TOMBOL FILTER & GALERI RAMBU EMOJI
+   ================================================== */
 .filter-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .filter-btn {
-    padding: 10px 16px;
+    padding: 10px 18px;
     border: none;
-    border-radius: 20px;
-    background-color: #e1e8ed;
-    color: #2c3e50;
+    border-radius: 30px;
+    background-color: #e2e8f0;
+    color: #475569;
     font-weight: 600;
+    font-size: 0.9rem;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.25s ease;
 }
 
 .filter-btn:hover {
@@ -202,227 +236,248 @@ body {
 }
 
 .filter-btn.active {
-    background-color: #1e272e;
-    color: #ffdd59;
+    background-color: #0f172a;
+    color: #fbbf24;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
 }
 
-/* Grid Galeri Kartu Rambu */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
+    gap: 22px;
 }
 
 .sign-card {
     background: #ffffff;
-    border-radius: 12px;
-    padding: 20px;
-    border: 2px solid #e1e8ed;
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: var(--radius-box);
+    padding: 24px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
 }
 
 .sign-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    border-color: #cbd5e1;
 }
 
 .sign-card.hide {
     display: none;
 }
 
-/* Warna Border & Badge Tiap Kategori Rambu */
-.sign-card.peringatan { border-top: 6px solid #ffd32a; }
-.sign-card.larangan { border-top: 6px solid #ff3f34; }
-.sign-card.perintah { border-top: 6px solid #0fbcf9; }
-.sign-card.petunjuk { border-top: 6px solid #05c46b; }
+/* Aksen Warna Atas Kartu Sesuai Kategori */
+.sign-card.peringatan { border-top: 5px solid #fbbf24; }
+.sign-card.larangan { border-top: 5px solid #ef4444; }
+.sign-card.perintah { border-top: 5px solid #3b82f6; }
+.sign-card.petunjuk { border-top: 5px solid #10b981; }
 
 .sign-badge {
     font-size: 0.75rem;
-    font-weight: bold;
-    padding: 4px 12px;
-    border-radius: 12px;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 20px;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
 }
 
-.badge-yellow { background: #fff3cd; color: #856404; }
-.badge-red { background: #f8d7da; color: #721c24; }
-.badge-blue { background: #d1ecf1; color: #0c5460; }
-.badge-green { background: #d4edda; color: #155724; }
+.badge-yellow { background: #fef3c7; color: #92400e; }
+.badge-red { background: #fee2e2; color: #991b1b; }
+.badge-blue { background: #dbeafe; color: #1e40af; }
+.badge-green { background: #d1fae5; color: #065f46; }
 
-/* Styling Kotak Ikon Emoji Rambu */
+/* Wadah Emoji Rambu */
 .emoji-icon {
-    font-size: 2.8rem;
-    width: 85px;
-    height: 85px;
+    font-size: 3rem;
+    width: 90px;
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f1f2f6;
-    border-radius: 16px;
-    margin: 5px auto 15px auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    background: #f8fafc;
+    border-radius: 20px;
+    margin: 5px auto 18px auto;
+    border: 1px solid #e2e8f0;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
 }
 
 .sign-card h3 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     margin-bottom: 10px;
-    color: #1e272e;
+    color: #1e293b;
+    font-weight: 700;
 }
 
 .sign-card p {
-    font-size: 0.92rem;
-    color: #576574;
+    font-size: 0.9rem;
+    color: #64748b;
 }
 
-/* Mitos vs Fakta */
+/* ==================================================
+   MITOS VS FAKTA & ETIKA
+   ================================================== */
 .myth-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 22px;
 }
 
 .myth-card {
-    background: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    border-left: 5px solid #1e272e;
+    background: #f8fafc;
+    padding: 22px;
+    border-radius: 12px;
+    border-left: 5px solid #0f172a;
+    border-top: 1px solid #e2e8f0;
+    border-right: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .myth-card hr {
-    margin: 15px 0;
+    margin: 16px 0;
     border: 0;
     border-top: 1px dashed #cbd5e1;
 }
 
 .myth-tag {
-    color: #ff3f34;
-    font-weight: bold;
-    margin-bottom: 5px;
+    color: var(--danger-color);
+    font-weight: 700;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
 }
 
 .fact-tag {
-    color: #05c46b;
-    font-weight: bold;
-    margin-bottom: 5px;
+    color: var(--success-color);
+    font-weight: 700;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
 }
 
-/* Etika Berkendara */
 .ethics-list {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 16px;
 }
 
 .ethics-item {
-    background: #f8f9fa;
-    padding: 15px 20px;
-    border-radius: 8px;
-    border-left: 4px solid #0fbcf9;
+    background: #f8fafc;
+    padding: 18px 22px;
+    border-radius: 12px;
+    border-left: 5px solid var(--primary-color);
+    border-top: 1px solid #e2e8f0;
+    border-right: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .ethics-item h3 {
     font-size: 1.05rem;
-    margin-bottom: 5px;
-    color: #1e272e;
+    margin-bottom: 6px;
+    color: #1e293b;
 }
 
-/* Kuis Uji Pemahaman */
+/* ==================================================
+   KUIS & KONTAK DARURAT
+   ================================================== */
 .quiz-box {
-    background: #f8f9fa;
-    padding: 25px;
-    border-radius: 10px;
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 12px;
     margin-bottom: 25px;
-    border: 1px solid #e1e8ed;
+    border: 1px solid #e2e8f0;
 }
 
 #quiz-question {
     font-size: 1.15rem;
-    font-weight: bold;
-    margin-bottom: 15px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1e293b;
 }
 
 .quiz-options {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 15px;
+    gap: 12px;
+    margin-bottom: 20px;
 }
 
 .option-btn {
-    padding: 12px 15px;
+    padding: 14px 18px;
     text-align: left;
     background: #ffffff;
     border: 2px solid #cbd5e1;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 1rem;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.2s ease;
+    color: #334155;
+    font-weight: 500;
 }
 
 .option-btn:hover:not(:disabled) {
-    border-color: #1e272e;
-    background: #eef2f5;
+    border-color: var(--primary-color);
+    background: #f1f5f9;
 }
 
 .option-btn.correct {
-    background: #d4edda;
-    border-color: #05c46b;
-    color: #155724;
-    font-weight: bold;
+    background: #d1fae5;
+    border-color: var(--success-color);
+    color: #065f46;
+    font-weight: 700;
 }
 
 .option-btn.wrong {
-    background: #f8d7da;
-    border-color: #ff3f34;
-    color: #721c24;
+    background: #fee2e2;
+    border-color: var(--danger-color);
+    color: #991b1b;
+    font-weight: 700;
 }
 
 .btn-primary {
-    background: #1e272e;
-    color: #ffdd59;
+    background: #0f172a;
+    color: #fbbf24;
     border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
+    padding: 12px 24px;
+    border-radius: 10px;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 700;
     cursor: pointer;
+    transition: background 0.2s;
 }
 
 .btn-primary:hover {
-    background: #2f3640;
+    background: #1e293b;
 }
 
 .quiz-result {
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1.15rem;
+    font-weight: 700;
     text-align: center;
     padding: 20px;
-    background: #d4edda;
-    color: #155724;
-    border-radius: 8px;
+    background: #d1fae5;
+    color: #065f46;
+    border-radius: 10px;
 }
 
 .hidden {
     display: none;
 }
 
-/* Kontak Darurat */
 .emergency-box {
     background: #fff5f5;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #feb2b2;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #fecaca;
     text-align: center;
 }
 
 .emergency-box h3 {
-    color: #c53030;
-    margin-bottom: 15px;
+    color: #b91c1c;
+    margin-bottom: 16px;
+    font-size: 1.1rem;
 }
 
 .emergency-numbers {
@@ -434,37 +489,43 @@ body {
 
 .em-card {
     background: #ffffff;
-    padding: 12px 20px;
-    border-radius: 8px;
-    border: 1px solid #fc8181;
-    font-size: 1.05rem;
+    padding: 12px 22px;
+    border-radius: 10px;
+    border: 1px solid #fca5a5;
+    font-size: 1rem;
+    color: #7f1d1d;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
 }
 
-/* Footer */
+/* ==================================================
+   FOOTER & RESPONSIVE HP
+   ================================================== */
 footer {
-    background: #1e272e;
-    color: #d2dae2;
+    background: #0f172a;
+    color: #94a3b8;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    padding: 25px;
+    margin-top: 50px;
     font-size: 0.9rem;
+    border-top: 1px solid #1e293b;
 }
 
-/* Responsif untuk Layar HP */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
+        padding: 15px 20px;
     }
 
     .nav-links {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 12px;
-        font-size: 0.9rem;
+        gap: 14px;
+        font-size: 0.85rem;
     }
 
     .hero-content h1 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 }
